@@ -1,0 +1,42 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/server_header">
+        <EditTextPreference
+            android:defaultValue="master.joan.vnct.xyz"
+            android:inputType="textUri"
+            android:key="host"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/host_title" />
+        <EditTextPreference
+            android:defaultValue="443"
+            android:inputType="number"
+            android:key="port"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/port_title" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="secure"
+            android:title="@string/secure_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/credentials_header">
+
+        <EditTextPreference
+            android:inputType="text"
+            android:key="key"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/key_title" />
+        <EditTextPreference
+            android:inputType="textPassword"
+            android:key="secret"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/secret_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
