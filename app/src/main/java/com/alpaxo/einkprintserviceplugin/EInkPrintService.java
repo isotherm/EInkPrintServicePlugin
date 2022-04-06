@@ -61,7 +61,11 @@ public class EInkPrintService extends PrintService {
                                 }
 
                                 JSONObject options = device.getJSONObject("Options");
-                                name = options.getString("Name");
+                                if (options.has("Name")) {
+                                    name = options.getString("Name");
+                                } else {
+                                    name = uuid;
+                                }
 
                                 JSONArray displays = device.getJSONArray("Displays");
                                 // TODO: Handle more than one display?
